@@ -1,0 +1,211 @@
+
+.left {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    min-width: 600px;
+    /* background-color: #858585; */
+}
+
+.functionArea {
+    width: 600px;
+    height: fit-content;
+    margin-top: 200px;
+    position: relative;
+}
+
+.prepareArea{
+    margin-top: 10%;
+}
+
+.prepareAreaHide{
+    display: none;
+}
+
+.functionArea .changeBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.functionArea .changeBtn span {
+    width: 300px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.functionArea .changeBtn a {
+    transition: color 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.functionArea .changeBtn a:hover {
+    color: #ffffff;
+}
+
+.functionArea .selectTextColor {
+    color: #ffffff;
+}
+
+.functionArea .solidLine {
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: #000;
+    transition: transform 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.functionArea .solidLineMove {
+    transform: translate(300px, 0);
+}
+
+.functionArea .dashLine {
+    width: 600px;
+    height: 5px;
+    background-image: linear-gradient(to right, #000 0%, #000 50%, transparent 50%);
+    background-size: 20px 3px;
+    background-repeat: repeat-x;
+}
+
+.functionArea .sendBox {
+    display: flex;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.functionArea .sendBox div {
+    width: 300px;
+    height: 80px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.functionArea .sendBox div:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+.functionArea .fileUpload {
+    border: 5px solid #000;
+    border-right: 2.5px solid #000;
+    border-radius: 80px 0 0 80px;
+}
+
+.functionArea .directoryUpload {
+    border: 5px solid #000;
+    border-left: 2.5px solid #000;
+    border-radius: 0 80px 80px 0;
+}
+
+.functionArea .sendInfo {
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.functionArea .sendInfo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%; 
+    height: 5px; 
+    background: black; 
+}
+
+.functionArea .sendInfo .transferCode{
+    height: 80px;
+    font-size: 32px;
+    line-height: 80px;
+}
+
+.functionArea .sendInfo .sendConfirm{
+    width: 40%;
+    height: 80px;
+    background-color: #fff;
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+    line-height: 70px;
+    border: 5px solid #000;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.functionArea .sendInfo .sendConfirm:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+.sendInfoDisable{
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.sendInfoEnable{
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.functionArea .sendBox p {
+    font-size: 32px;
+    text-align: center;
+    line-height: 70px;
+}
+
+
+.functionArea .receiveBox {
+    display: none;
+    width: 600px;
+    height: 80px;
+    margin-top: 20px;
+    border-radius: 80px;
+}
+
+.functionArea .receiveBox input {
+    width: 600px;
+    height: 80px;
+    padding-left: 5%;
+    font-size: 32px;
+    border: 5px solid #000;
+    border-radius: 80px;
+    outline: none;
+    color: #000;
+    position: relative;
+}
+
+#codeBtn {
+    width: 30%;
+    height: 80px;
+    background-color: #000;
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 80px;
+    cursor: pointer;
+    border: none;
+
+    position: absolute;
+    right: 0;
+}
+
+.codeBtnDisable {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.codeBtnEnable {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+

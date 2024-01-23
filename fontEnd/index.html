@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/leftAside.css">
+    <link rel="stylesheet" href="./CSS/rightAside.css">
+    <title>fileTransfer</title>
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="directoryUpload" id="directoryInput" webkitdirectory directory display="none">
+        <input type="file" name="fileUpload" id="fileInput" multiple display="none" autocomplete="off">
+    </form>
+    <section class="main">
+        <aside class="left">
+            <div class="functionArea">
+                <div class="prepareArea">
+                    <div class="changeBtn">
+                        <span><a href="#" id="sendBtn" class="selectTextColor">发送文件</a></span>
+                        <span><a href="#" id="receiveBtn">接收文件</a></span>
+                    </div>
+                    <div class="solidLine"></div>
+                    <div class="dashLine"></div>
+
+                    <div class="sendBox">
+                        <div class="fileUpload">
+                            <p>上传文件</p>
+                        </div>
+                        <div class="directoryUpload">
+                            <p>上传文件夹</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="receiveBox">
+                    <input type="text" placeholder="请输入6位传输码" maxlength="6" id="transferCodeReceive">
+                    <button id="codeBtn" class="codeBtnDisable">确认</button>
+                </div>
+            </div>
+        </aside>
+        <aside class="right">
+            <div class="filesBox filesBoxDisable">
+                <div class="sendFilesBox">
+                    <div class="sendFilesList">
+
+                    </div>
+                    <p id="sendFilesInfo">
+                    </p>
+                </div>
+                <div class="confirmSelect ">
+                    <p class="progress"></p>
+                    <p class="codeInfo codeInfoDisable">您的传输码：<span id="transferCodeContainer"></span><svg
+                            t="1702810564502" class="icon" id="copyCode" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="10592">
+                            <path
+                                d="M612.6 315.8H296.1c-55.2 0-100.1 44.9-100.1 100.1v316.5c0 55.2 44.9 100.1 100.1 100.1h316.5c55.2 0 100.1-44.9 100.1-100.1V415.9c0-55.2-44.9-100.1-100.1-100.1z m38.6 416.5c0 21.3-17.3 38.6-38.6 38.6H296.1c-21.3 0-38.6-17.3-38.6-38.6V415.9c0-21.3 17.3-38.6 38.6-38.6h316.5c21.3 0 38.6 17.3 38.6 38.6v316.4z"
+                                p-id="10593" fill="#ffffff"></path>
+                            <path
+                                d="M832.4 621.9V307.5h-0.1v-8.3c0-56.4-45.9-102.3-102.3-102.3H404.8c-1 0-1.9 0.1-2.9 0.1h-0.7c-0.8-0.1-1.6-0.1-2.6-0.1-17.4 0-31.5 14.1-31.5 31.5 0 17.3 14.1 31.4 31.4 31.5l9 0.1h322.6c21.6 0 39.2 17.6 39.2 39.2v322.7c0 1.8 0 3.5 0.1 5.2 0 1.7 0.1 3.4 0.1 5.1 0.1 17.2 14.2 31.3 31.5 31.3 17.4 0 31.5-14.1 31.5-31.5 0-0.9-0.1-2.1-0.2-3.1v-1c0-2.3 0.1-4.2 0.1-6z"
+                                p-id="10594" fill="#ffffff"></path>
+                        </svg></p>
+
+                    <button id="confirmUploadBtn">确认上传</button>
+                </div>
+            </div>
+            <div class="receiveFilesBox">
+                <p class="receiveFilesBoxTitle"></p>
+                <div class="receiveFilesList"></div>
+            </div>
+        </aside>
+    </section>
+    <footer></footer>
+    <script src="./JS/clipboard.js"></script>
+    <script src="./JS/jszip.js"></script>
+    <script src="./JS/send.js"></script>
+    <script src="./JS/receive.js"></script>
+</body>
+
+</html>

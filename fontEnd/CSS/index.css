@@ -1,0 +1,50 @@
+/* 
+.main是整个页面的主体，包含左右两个部分
+.left是左边的部分，包含功能区，用于文件发送和接收
+.right是右边的部分，用于展示信息
+.functionArea是功能区
+.changeBtn是切换区，包含两个按钮（实际为文字），用于切换发送和接收
+.solidLine是切换按钮下面的实线
+.dashLine是切换按钮下面的虚线
+.sendBox是发送区，包含两个按钮（实际为文字），用于发送文件和文件夹
+.receiveBox是接收区，包含一个输入框和一个按钮，用于输入验证码和确认接收
+.uploadWindow是发送文件时的上传窗口，当点击发送文件按钮时，会出现
+.receiveWindow是接收文件时的接收窗口，当点击接收确认接收文件按钮时，会出现
+*/
+
+body {
+    background-image: url(../img/bgimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 1200px;
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main {
+    display: flex;
+    /* justify-content: center; */
+    width: 100vw;
+    height: 95vh;
+}
+#fileInput{
+    display: none;
+}
+
+#directoryInput{
+    display: none;
+}
+
+footer {
+    width: 100vw;
+    height: 5vh;
+    /* background-color: aquamarine; */
+}

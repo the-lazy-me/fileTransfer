@@ -1,0 +1,198 @@
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-width: 600px;
+}
+
+.filesBox {
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    border: 5px solid #000;
+    border-radius: 50px;
+}
+
+.filesBoxDisable {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    /* opacity: 1; */
+    /* visibility: visible; */
+    /* transition: visibility 0s linear 0s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1); */
+}
+
+.filesBoxEnable {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+
+.sendFilesList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 20px 20px 0 0;
+    background-color: #ffffff30;
+}
+
+.sendFilesList svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sendFilesList p {
+    width: 500px;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    display: flex;
+    /* overflow: hidden; */
+    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.sendFilesList p span{
+    width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 超出部分用...代替 */
+    white-space: nowrap; /* 不换行 */
+
+}
+
+
+.sendFilesList p:hover {
+    cursor: pointer;
+    background-color: #ffffff50;
+}
+
+.deleteIcon {
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.deleteIcon:hover {
+    transform: scale(1.5);
+}
+
+
+.sendFilesList::-webkit-scrollbar {
+    height: 450px;
+    width: 5px;
+}
+
+.sendFilesList::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 10px;
+}
+
+.sendFilesList::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.sendFilesList::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+.sendFilesList::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+}
+
+#sendFilesInfo {
+    width: 100%;
+    padding-top: 20px;
+    background-color: #ffffff30;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.confirmSelect {
+    display: flex;
+    width: 500px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.progress{
+    width: 325px;
+    height: 60px;
+    display: flex;
+    font-size: 24px;
+    line-height: 60px;
+    color: #fff;
+    position: absolute;
+}
+
+.codeInfo{
+    width: 325px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 60px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.codeInfo svg{
+    width: 48px;
+    height: 48px;
+    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#transferCode{
+    font-size: 32px;
+}
+
+#copyCode:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#confirmUploadBtn{
+    width: 150px;
+    height:60px;
+    background-color: #000;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 80px;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#confirmUploadBtn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+.codeInfoDisable{
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.codeInfoEnable{
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
