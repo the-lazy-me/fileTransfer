@@ -32,7 +32,7 @@
 1. 克隆此项目
 
 ```bash
-git clone
+git clone https://github.com/the-lazy-me/fileTransfer
 ```
 
 2. 安装后端所需的pip包
